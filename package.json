@@ -1,0 +1,25 @@
+{
+  "name": "tecs-hub-frontend",
+  "version": "1.0.0",
+  "description": "Front-End da Plataforma TECs Hub",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jennifer-magpantay"
+  },
+  "keywords": [
+    "HMTL",
+    "CSS",
+    "JS",
+    "json"
+  ],
+  "author": "Jennifer Magpantay",
+  "license": "ISC",
+  "dependencies": {
+    "file-system": "^2.2.2"
+  },
+  "type": "module"
+}
