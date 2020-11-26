@@ -30,7 +30,7 @@ body {
 }
 
 button {
-  width: 45%;
+  width: 48%;
   padding: 14px 30px;
   background-color: var(--red);
   border: none;
@@ -66,7 +66,7 @@ p {
 /* ---------- HEADER ---------- */
 header {
   width: 100%;
-  height: 100px;
+  height: 70px;
   display: flex;
   align-items: center;
   background-color: var(--white);
@@ -74,7 +74,7 @@ header {
 
 .logo {
   width: auto;
-  height: 80px;
+  height: 50px;
 }
 
 /* ---------- PAGINA INICIAL ---------- */
@@ -96,13 +96,20 @@ section {
   width: 100%;
   height: auto;
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   padding: 2%;
+  margin-bottom: 2%;
   background-color: var(--off-white);
 }
 
 .container--sm {
   width: 50%;
+  height: auto;
+}
+
+img {
+  width: 100%;
   height: auto;
 }
 
@@ -147,10 +154,10 @@ section {
 }
 
 /* ---------- LISTA ---------- */
-.table {
+table {
   width: 100%;
   height: auto;
-  margin: 2% 0;
+  margin: 1% 0;
   font-family: "Roboto", sans-serif;
   font-size: 1em;
   box-shadow: var(--box-shadow-black);
@@ -158,7 +165,7 @@ section {
   -moz-box-shadow: 0px 1px 3px 0px rgba(50, 50, 50, 0.75);
 }
 
-.table,
+table,
 td,
 th {
   border-collapse: collapse;
@@ -216,6 +223,10 @@ td:nth-child(8) {
   width: 25%;
 }
 
+td:nth-child(9) {
+  padding-right: 1%;
+}
+
 td:not(:last-child) {
   padding-right: 12px;
 }
@@ -226,6 +237,18 @@ th:not(:last-child) {
 
 tr:hover {
   background-color: #f5f5f5;
+}
+
+.mobile {
+  display: none;
+  padding: 3% 0;
+  margin: 2% 0;
+  border-top: 1px solid var(--orange);
+  border-bottom: 1px solid var(--orange);
+}
+
+span {
+  font-weight: bold;
 }
 
 /* ---------- FOOTER ---------- */
@@ -249,11 +272,73 @@ footer {
 
 /* ---------- MEDIA QUERIES ---------- */
 /* 1440 Laptop L */
+@media (max-width: 1350px) {
+  .btn__container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container--sm button {
+    margin-bottom: 2%;
+  }
+
+  button {
+    width: 100%;
+  }
+}
 
 /* 1240 Laptop */
 
 /* 768 Tablet */
 
 /* 425 Mobile L */
-@media (max-width: 000px) {
+@media (max-width: 926px) {
+  .title {
+    font-size: 2em;
+  }
+
+  .subtitle {
+    font-size: 1.25em;
+  }
+
+  button {
+    font-size: 1em;
+  }
+
+  p {
+    font-size: 0.88em;
+  }
+
+  .container--sm {
+    width: 100%;
+  }
+
+  table {
+    font-size: 0.88em;
+  }
+
+  th {
+    width: auto;
+  }
+
+  .card,
+  .content {
+    flex: 1 100%;
+  }
+}
+
+/* esconder table em mobile e mostrar opcao para download do google drive */
+@media (max-width: 768px) {
+  table,
+  tbody {
+    display: none;
+  }
+
+  .mobile {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 }

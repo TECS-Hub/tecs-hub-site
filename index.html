@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="icon" href="./images/logo_tecs-hub.png" />
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -17,7 +19,7 @@
 
 <body>
     <header>
-        <img class="logo" src="./images/Hub.png" alt="logo TECs Hub" />
+        <img class="logo" src="./images/logo_tecs-hub.png" alt="logo TECs Hub" />
     </header>
     <section class="pagina--inicial">
         <div class="container">
@@ -40,14 +42,52 @@
                         out of litter box and run around the house scream meowing and smearing hot cat mud all over
                         growl at dogs in my sleep. Blow up sofa in 3 seconds. Lick the curtain just to be annoying cough
                         hairball</p>
-                    <!-- adicionar no js metodo para imprimir lista suja -->
-                    <button id="btn--lista">VISUALIZAR LISTA 2020</button>
-                    <!-- adicionar link para sites google -->
-                    <a href="https://sites.google.com/view/tecshub/p%C3%A1gina-inicial">
-                        <button id="btn--eBook">E-BOOK</button></a>
+                    <div class="btn__container">
+                        <!-- adicionar no js metodo para imprimir lista suja -->
+                        <button id="btn--lista">VISUALIZAR LISTA 2020</button>
+                        <!-- adicionar link para sites google -->
+                        <a href="https://sites.google.com/view/tecshub/p%C3%A1gina-inicial">
+                            <button id="btn--eBook">E-BOOK</button></a>
+                    </div>
                 </div>
             </div>
+
+            <!-- section aonde sera printada a lista -->
+            <!-- adicionar style inline no elemento - pelo css file terá delay de um click -->
+            <section id="gerar--lista" class="lista" style="display:none">
+
+                <!-- mensagem para mobile users -->
+                <div class="mobile">
+                    <p>A <span>"Lista Suja do Trabalho Escravo no Brasil"</span> é um documento extenso para ser
+                        visualizada em alguns dispositivos móveis.
+                        Deseja baixar o pdf original?</p>
+                    <a href="https://drive.google.com/file/d/15sTfnaKwNSW5LnDSagFUwSP_GtF-c-wv/view?usp=sharing">
+                        <button>BAIXAR LISTA SUJA 2020</button>
+                    </a>
+                </div>
+
+                <!-- table -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>UF</th>
+                            <th>EMPREGADOR</th>
+                            <th>CNPJ/CPF</th>
+                            <th>ESTABELECIMENTO</th>
+                            <th>TRABALHADORES</th>
+                            <th>CNAE</th>
+                            <th>descrição</th>
+                            <th>inclusão</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table__body"></tbody>
+                </table>
+            </section>
+
+
             <div class="container">
+
                 <!-- cards com informacoes -->
                 <div class="card">
                     <h2 class="subtitle">SOMETHING</h2>
@@ -67,31 +107,10 @@
                         hide when guests come over, for a nice warm laptop for me to sit on.</p>
                 </div>
             </div>
+
         </div>
     </section>
 
-    <!-- section aonde sera printada a lista -->
-    <!-- adicionar style inline no elemento - pelo css file terá delay de um click -->
-    <section id="gerar--lista" class="lista" style="display:none">
-
-        <table id="table" class="table">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>UF</th>
-                    <th>EMPREGADOR</th>
-                    <th>CNPJ/CPF</th>
-                    <th>ESTABELECIMENTO</th>
-                    <th>TRABALHADORES</th>
-                    <th>CNAE</th>
-                    <th>descrição</th>
-                    <th>inclusão</th>
-                </tr>
-            </thead>
-            <tbody id="table__body"></tbody>
-        </table>
-
-    </section>
 
     <footer>
         <div class="container">
