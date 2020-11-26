@@ -145,6 +145,35 @@ section {
 }
 
 /* ---------- LISTA ---------- */
+.table {
+  width: 100%;
+  height: auto;
+  border-collapse: collapse;
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+}
+
+thead,
+tbody {
+  width: auto;
+}
+
+th,
+td {
+  width: auto;
+  height: auto;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+th:not(:last-child) {
+  padding-right: 8px;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
 
 /* ---------- FOOTER ---------- */
 footer {
@@ -159,7 +188,7 @@ footer {
   flex: 0 1 30%;
   padding: 1%;
   margin: 1% 0;
-  }
+}
 
 .content:not(:last-child) {
   margin-right: 1%;
