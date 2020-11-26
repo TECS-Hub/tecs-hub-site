@@ -40,10 +40,11 @@
                         out of litter box and run around the house scream meowing and smearing hot cat mud all over
                         growl at dogs in my sleep. Blow up sofa in 3 seconds. Lick the curtain just to be annoying cough
                         hairball</p>
-                    <!-- adicionar js para imprimir lista suja -->
-                    <button id="btn--lista" onclick="start()">VISUALIZAR LISTA 2020</button>
+                    <!-- adicionar no js metodo para imprimir lista suja -->
+                    <button id="btn--lista">VISUALIZAR LISTA 2020</button>
                     <!-- adicionar link para sites google -->
-                    <button id="btn--eBook">E-BOOK</button>
+                    <a href="https://sites.google.com/view/tecshub/p%C3%A1gina-inicial">
+                        <button id="btn--eBook">E-BOOK</button></a>
                 </div>
             </div>
             <div class="container">
@@ -70,7 +71,8 @@
     </section>
 
     <!-- section aonde sera printada a lista -->
-    <section id="gerar--lista" class="lista">
+    <!-- adicionar style inline no elemento - pelo css file terá delay de um click -->
+    <section id="gerar--lista" class="lista" style="display:none">
 
         <table id="table" class="table">
             <thead>
@@ -82,8 +84,8 @@
                     <th>ESTABELECIMENTO</th>
                     <th>TRABALHADORES</th>
                     <th>CNAE</th>
-                    <th>DESCRICAO</th>
-                    <th>INCLUSAO</th>
+                    <th>descrição</th>
+                    <th>inclusão</th>
                 </tr>
             </thead>
             <tbody id="table__body"></tbody>

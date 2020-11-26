@@ -22,7 +22,7 @@ function handleClickButton(event) {
 
 async function abrirLista() {
     // ativar o display da table
-    let showTable = document.querySelector("#table");
+    let showTable = document.querySelector("#gerar--lista");
     // passa condicao (if/else)
     showTable.style.display === "none" ? showTable.style.display = "block" : showTable.style.display = "none";
 
