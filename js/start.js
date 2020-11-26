@@ -21,6 +21,11 @@ function handleClickButton(event) {
 }
 
 async function abrirLista() {
+    // ativar o display da table
+    let showTable = document.querySelector("#table");
+    // passa condicao (if/else)
+    showTable.style.display === "none" ? showTable.style.display = "block" : showTable.style.display = "none";
+
     //fazer o fecth dos dados
     const url = "./data/dados.json";
     const res = await fetch(url);
@@ -28,7 +33,6 @@ async function abrirLista() {
     // ler a array usando map
     dataList = dadosEmpregador.map((dado) => {
         const { id,
-            ano_acao_fiscal,
             uf,
             empregador,
             cnpj_cpf,
@@ -40,7 +44,6 @@ async function abrirLista() {
 
         return {
             id: id,
-            ano_acao: ano_acao_fiscal,
             uf: uf,
             empregador: empregador,
             cnpj_cpf: cnpj_cpf,
@@ -59,18 +62,17 @@ function renderizaLista() {
     // renderizar a lista dentro de uma tabela utilizando elementos HTML
     let table = "";
     dataList.forEach((dado) => {
-        const { id, ano_acao, uf, empregador, cnpj_cpf, estabelecimento, n_trabalhadores, cnae, cnae_descricao, data_inclusao } = dado;
+        const { id, uf, empregador, cnpj_cpf, estabelecimento, n_trabalhadores, cnae, cnae_descricao, data_inclusao } = dado;
         const element = `
-        <th>${id}</th>
-        <th>${ano_acao}</th>
-        <th>${uf}</th>
-        <th>${empregador}</th>
-        <th>${cnpj_cpf}</th>
-        <th>${estabelecimento}</th>
-        <th>${n_trabalhadores}</th>
-        <th>${cnae}</th>
-        <th>${cnae_descricao}</th>
-        <th>${data_inclusao}</th>               
+        <td>${id}</td>
+        <td>${uf}</td>
+        <td>${empregador}</td>
+        <td>${cnpj_cpf}</td>
+        <td>${estabelecimento}</td>
+        <td>${n_trabalhadores}</td>
+        <td>${cnae}</td>
+        <td>${cnae_descricao}</td>
+        <td>${data_inclusao}</td>               
         `;
         table += "<tr>" + element + "</tr>";
     });

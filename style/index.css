@@ -148,27 +148,67 @@ section {
 .table {
   width: 100%;
   height: auto;
-  border-collapse: collapse;
+  display: none;
+  margin: 2% 0;
   font-family: "Roboto", sans-serif;
   font-size: 1em;
+}
+
+.table,
+td,
+th {
+  border-collapse: collapse;
 }
 
 thead,
 tbody {
   width: auto;
+  height: auto;
 }
 
-th,
-td {
-  width: auto;
+thead th {
+  padding: 1% 0;
+  background-color: var(--off-white);
+}
+
+thead th:nth-child(1) {
+  padding-left: 1%;
+}
+
+td,
+th {
   height: auto;
-  padding: 8px 0;
+  padding: 10px 0;
   border-bottom: 1px solid #ddd;
   text-align: left;
 }
 
+td:nth-child(1) {
+  padding-left: 1%;
+}
+
+td:nth-child(4) {
+  width: 10%;
+}
+
+td:nth-child(3) {
+  width: 15%;
+}
+
+td:nth-child(7) {
+  width: 6%;
+}
+
+td:nth-child(8) {
+  width: 25%;
+}
+
+td:not(:last-child) {
+  padding-right: 12px;
+}
+
 th:not(:last-child) {
-  padding-right: 8px;
+  padding-right: 12px;
 }
 
 tr:hover {
