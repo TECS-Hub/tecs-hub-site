@@ -81,7 +81,6 @@ header {
 section {
   width: 100%;
   height: auto;
-  /* border-bottom: 1px solid var(--black); */
 }
 
 .container {
@@ -108,9 +107,10 @@ section {
   height: auto;
 }
 
-img {
+.grafico {
   width: 100%;
   height: auto;
+  padding-right: 2%;
 }
 
 .title {
@@ -121,6 +121,12 @@ img {
 .subtitle {
   font-size: 1.5em;
   margin-bottom: 3%;
+  letter-spacing: 1px;
+}
+
+.caption {
+  font-size: 0.94em;
+  font-style: italic;
 }
 
 .card {
@@ -249,6 +255,7 @@ tr:hover {
 
 span {
   font-weight: bold;
+  letter-spacing: 1px;
 }
 
 /* ---------- FOOTER ---------- */
@@ -262,12 +269,20 @@ footer {
 .content {
   height: auto;
   flex: 0 1 30%;
-  padding: 1%;
+  padding-left: 1%;
   margin: 1% 0;
 }
 
 .content:not(:last-child) {
   margin-right: 1%;
+}
+
+.content img {
+  margin: 2% 0 0 1%;
+}
+
+.content p{
+  margin-top: 2%;
 }
 
 /* ---------- MEDIA QUERIES ---------- */
