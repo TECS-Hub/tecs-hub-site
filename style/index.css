@@ -123,9 +123,10 @@ section {
 }
 
 .subtitle {
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin-bottom: 3%;
   letter-spacing: 1px;
+  text-align: center;
 }
 
 .caption {
