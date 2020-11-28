@@ -320,7 +320,7 @@ footer {
   }
 
   .subtitle {
-    font-size: 1.25em;
+    font-size: 1em;
   }
 
   button {
@@ -346,6 +346,14 @@ footer {
   .card,
   .content {
     flex: 1 100%;
+  }
+
+  .content{
+    margin-top: 1%;
+  }
+  footer {
+    width: 100%;
+    height: auto;
   }
 }
 
